@@ -10,6 +10,14 @@
 .rowContainer {
   width: 100%;
 }
+
+.normalButton {
+  background: #FAFAFA;
+}
+
+.normalButton:hover {
+  background: #FFF;
+}
   
 @media ( min-width: 100px ) {
   * {
