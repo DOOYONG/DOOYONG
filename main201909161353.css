@@ -2,6 +2,10 @@
   padding: 0;
   margin: 0;
 }
+
+.centerContainer, .adBox1Container {
+  position: relative;
+}
   
 @media ( min-width: 100px ) {
   * {
