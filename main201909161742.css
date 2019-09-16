@@ -30,7 +30,7 @@
   
   .adBox1Container {
     width: 100%;
-    height: 15rem;
+    height: 30rem;
     background: #333;
     color: #fff;
     font-size: 2rem;
@@ -49,8 +49,8 @@
   
   .adBox1Container {
     margin: 0 auto;
-    width: 20rem;
-    height: 15rem;
+    width: 40rem;
+    height: 30rem;
     background: #333;
     color: #fff;
     font-size: 2rem;
