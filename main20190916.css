@@ -7,11 +7,11 @@
   .centerContainer {
     width: 100%;
   }
-};
+}
 
 @media ( min-width: 900px ) {
   .centerContainer {
     margin: 0 auto;
     width: 900px;
   }
-};
+}
