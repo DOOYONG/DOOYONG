@@ -6,6 +6,10 @@
 .centerContainer, .adBox1Container {
   position: relative;
 }
+
+.rowContainer {
+  width: 100%;
+}
   
 @media ( min-width: 100px ) {
   * {
