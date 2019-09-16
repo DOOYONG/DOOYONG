@@ -2,15 +2,16 @@
   padding: 0;
   margin: 0;
 }
-
-.centerContainer {
-  margin: 0 auto;
   
-  @media ( min-width: 100px ) {
+@media ( min-width: 100px ) {
+  .centerContainer {
     width: 100%;
-  };
-  
-  @media ( min-width: 900px ) {
+  }
+};
+
+@media ( min-width: 900px ) {
+  .centerContainer {
+    margin: 0 auto;
     width: 900px;
-  };
-}
+  }
+};
