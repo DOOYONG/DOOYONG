@@ -70,7 +70,8 @@
 			
 			$.get('./view/' + target.text() + '.html',
 				function(data){
-					console.log(data);
+					$("#mainView_" + target.text()).remove();	
+				
 					$(".mainDiv").eq(0).append(data);
 					
 					var targetView = $("#mainView_" + target.text());
