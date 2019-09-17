@@ -60,10 +60,7 @@
 				$(this).hide();
 			});
 			
-			$.post('./view/' + target.text() + '.html',
-				{
-					test : "test"
-				},
+			$.get('./view/' + target.text() + '.html',
 				function(data){
 					console.log(data);
 				}
