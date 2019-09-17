@@ -1,0 +1,89 @@
+* {
+	padding: 0;
+	margin: 0;
+	font-family: 'Nanum Gothic', sans-serif;
+}
+
+.historyDiv, .mainDiv {
+	position: fixed;
+	height: 100%;
+}
+
+.historyDiv {
+	width: calc(6rem + 20rem);
+	left: 0;
+	top: 0;
+	background: #777;
+}
+
+.mainDiv {
+	width: calc(100% - 6rem);
+	right: 0;
+	top: 0;
+}
+
+.scrollDiv {
+	height: 100%;
+	overflow: scroll;
+}
+
+.historyItemDiv {
+	font-family: 'Righteous', sans-serif;
+	width: 6rem;
+	text-align: center;
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+	margin-top: 7rem;
+}
+
+.centerContainer, .adBox1Container {
+	position: relative;
+}
+
+.rowContainer {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	display: none;
+}
+
+.normalButton {
+	background: #DDD;
+}
+
+.normalButton:hover {
+	background: #FFF;
+}
+
+.adBox1Container {
+	height: 30rem;
+	font-size: 2rem;
+}
+
+@media ( min-width : 100px ) {
+	* {
+		font-size: 10px;
+	}
+	.centerContainer {
+		width: 100%;
+	}
+	.adBox1Container {
+		width: 100%;
+	}
+}
+
+@media ( min-width : 900px ) {
+	* {
+		font-size: 14px;
+	}
+	.centerContainer {
+		margin: 0 auto;
+		width: 900px;
+	}
+	.adBox1Container {
+		margin: 0 auto;
+		width: 40rem;
+	}
+}

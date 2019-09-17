@@ -1,63 +1,101 @@
 <html>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta charset="UTF-8">
-    <link href="https://fonts.googleapis.com/css?family=Monoton|Nanum+Gothic|Poiret+One|Righteous|Sacramento&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./main201909170942.css" />
-  </head>
-  <body>
-    <!-- first row start -->
-    <div class="rowContainer" style="background: #333;">
-      <div class="centerContainer">
-        <div class="adBox1Container" style="color: #fff;">
-          <div style="position: absolute; font-size: 5rem; font-family: 'Righteous', sans-serif;">TEST</div>
-          <div style="position: absolute; left: 0.2rem; top: 4.8rem; font-size: 1.5rem; font-family: 'Righteous', sans-serif;">It is test.</div>
-          <div
-             class="normalButton"
-             style="position: absolute; left: calc(50% - 3rem); bottom: 1rem; width: 6rem; min-height: 1.6rem;"
-             onclick="location.href='https://www.youtube.com/channel/UCt9cwlw2fk9UqnxfYhiyKbA';">
-            <div style="color: #333; padding: 0.2rem; text-align: center;">Button</div>
-          </div>
-          <div style="position: absolute; right: 0.3rem; bottom: 0.3rem; font-size: 0.7rem;">ⓒ DOOYONG</div>
-        </div>
-      </div>
-    </div>
-    <!-- first row end -->
-    
-    <!-- second row start -->
-    <div class="rowContainer" style="background: #fff;">
-      <div class="centerContainer">
-        <div class="adBox1Container" style="color: #222;">
-          <div style="position: absolute; right: 0; font-size: 5rem; font-family: 'Monoton', sans-serif;">TEST</div>
-          <div style="position: absolute; right: 0.2rem; top: 5.5rem; font-size: 1.5rem; font-family: 'Monoton', sans-serif;">It is test.</div>
-          <div
-             class="normalButton"
-             style="position: absolute; right: 0.2rem; top: 8.5rem; width: 6rem; min-height: 1.6rem;"
-             onclick="location.href='https://www.youtube.com/channel/UCt9cwlw2fk9UqnxfYhiyKbA';">
-            <div style="color: #333; padding: 0.2rem; text-align: center;">Button</div>
-          </div>
-          <div style="position: absolute; right: 0.3rem; bottom: 0.3rem; font-size: 0.7rem;">ⓒ DOOYONG</div>
-        </div>
-      </div>
-    </div>
-    <!-- second row end -->
-    
-    <!-- third row start -->
-    <div class="rowContainer" style="background: #123456;">
-      <div class="centerContainer">
-        <div class="adBox1Container" style="color: #fff;">
-          <div style="position: absolute; right: 10rem; font-size: 5rem; font-family: 'Monoton', sans-serif;">TEST</div>
-          <div style="position: absolute; right: 10rem; top: 5.5rem; font-size: 1.5rem; font-family: 'Monoton', sans-serif;">It is test.</div>
-          <div
-             class="normalButton"
-             style="position: absolute; right: 10rem; top: 8.5rem; width: 6rem; min-height: 1.6rem;"
-             onclick="location.href='https://www.youtube.com/channel/UCt9cwlw2fk9UqnxfYhiyKbA';">
-            <div style="color: #333; padding: 0.2rem; text-align: center;">Button</div>
-          </div>
-          <div style="position: absolute; right: 0.3rem; bottom: 0.3rem; font-size: 0.7rem;">ⓒ DOOYONG</div>
-        </div>
-      </div>
-    </div>
-    <!-- third row end -->
-  </body>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta charset="UTF-8">
+		<link
+			href="https://fonts.googleapis.com/css?family=Monoton|Nanum+Gothic|Poiret+One|Righteous|Sacramento&display=swap"
+			rel="stylesheet">
+		<link rel="stylesheet" href="./main201909171056.css" />
+		<script src="./js/jquery-3.4.1.min.js"></script>
+	</head>
+	<body onload="changeMainView($('.historyItemDiv').eq(0));">
+		<!-- history div start -->
+		<div class="historyDiv">
+			<div class="scrollDiv">
+				<div class="historyItemDiv" onclick="changeMainView($(this));">2019</div>
+				<div class="historyItemDiv" onclick="changeMainView($(this));">2018</div>
+				<div class="historyItemDiv" onclick="changeMainView($(this));">2017</div>
+				<div class="historyItemDiv" onclick="changeMainView($(this));">2016</div>
+				<div class="historyItemDiv" onclick="changeMainView($(this));">2015</div>
+				<div class="historyItemDiv" onclick="changeMainView($(this));">2014</div>
+				<div class="historyItemDiv" onclick="changeMainView($(this));">2013</div>
+				<div class="historyItemDiv" onclick="changeMainView($(this));">2012</div>
+				<div class="historyItemDiv" onclick="changeMainView($(this));">1992</div>
+				<div class="historyItemDiv">.</div>
+			</div>
+			<div style="position: fixed; left: 0; bottom: 0; height: 3rem; background: #555; text-align: center; width: 6rem; line-height: 3rem;">...</div>
+		</div>
+		<!-- history div end -->
+	
+		<!-- main div start -->
+		<div class="mainDiv">
+			<!-- first row start -->
+			<div class="rowContainer" style="background: #333; display: block;" id="mainView_default">
+				<div class="centerContainer">
+					<div class="adBox1Container" style="color: #fff;">
+						<div style="position: absolute; font-size: 5rem; font-family: 'Righteous', sans-serif;">Default</div>
+						<div style="position: absolute; left: 0.2rem; top: 4.8rem; font-size: 1.5rem; font-family: 'Righteous', sans-serif;">this is default div.</div>
+						<div class="normalButton"
+							style="position: absolute; left: calc(50% - 3rem); bottom: 1rem; width: 6rem; min-height: 1.6rem;"
+							onclick="location.href='https://www.youtube.com/channel/UCt9cwlw2fk9UqnxfYhiyKbA';">
+							<div style="color: #333; padding: 0.2rem; text-align: center;">Button</div>
+						</div>
+						<div style="position: absolute; right: 0.3rem; bottom: 0.3rem; font-size: 0.7rem;">ⓒ DOOYONG</div>
+					</div>
+				</div>
+			</div>
+			<!-- first row end -->
+	
+			<!-- second row start -->
+			<div class="rowContainer" style="background: #fff;" id="mainView_2019">
+				<div class="centerContainer">
+					<div class="adBox1Container" style="color: #222;">
+						<div style="position: absolute; right: 0; font-size: 5rem; font-family: 'Monoton', sans-serif;">2019</div>
+						<div style="position: absolute; right: 0.2rem; top: 6.1rem; font-size: 1.2rem; font-family: 'Nanum Gothic', sans-serif;">룰루랄라 데스네</div>
+						<div class="normalButton"
+							style="position: absolute; right: 0.2rem; top: 8.5rem; width: 6rem; min-height: 1.6rem;"
+							onclick="location.href='https://www.youtube.com/channel/UCt9cwlw2fk9UqnxfYhiyKbA';">
+							<div style="color: #333; padding: 0.2rem; text-align: center;">Button</div>
+						</div>
+						<div style="position: absolute; right: 0.3rem; bottom: 0.3rem; font-size: 0.7rem;">ⓒ DOOYONG</div>
+					</div>
+				</div>
+			</div>
+			<!-- second row end -->
+	
+			<!-- third row start -->
+			<div class="rowContainer" style="background: #123456;">
+				<div class="centerContainer">
+					<div class="adBox1Container" style="color: #fff;">
+						<div style="position: absolute; right: 10rem; font-size: 5rem; font-family: 'Monoton', sans-serif;">TEST</div>
+						<div style="position: absolute; right: 10rem; top: 5.5rem; font-size: 1.5rem; font-family: 'Monoton', sans-serif;">It is test.</div>
+						<div class="normalButton"
+							style="position: absolute; right: 10rem; top: 8.5rem; width: 6rem; min-height: 1.6rem;"
+							onclick="location.href='https://www.youtube.com/channel/UCt9cwlw2fk9UqnxfYhiyKbA';">
+							<div style="color: #333; padding: 0.2rem; text-align: center;">Button</div>
+						</div>
+						<div style="position: absolute; right: 0.3rem; bottom: 0.3rem; font-size: 0.7rem;">ⓒ DOOYONG</div>
+					</div>
+				</div>
+			</div>
+			<!-- third row end -->
+		</div>
+		<!-- main div end -->
+	</body>
+	
+	<script>
+		function changeMainView(target) {
+			$(".rowContainer").each(function() {
+				$(this).hide();
+			});
+			
+			var targetView = $("#mainView_" + target.text());
+			if(targetView.length) {
+				targetView.show();
+			} else {
+				targetView = $("#mainView_default");
+			}
+			targetView.show();
+		}
+	</script>
 </html>
