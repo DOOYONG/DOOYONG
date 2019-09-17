@@ -60,6 +60,9 @@
 				$(this).hide();
 			});
 			
+			targetView = $("#mainView_default");
+			targetView.show();
+			
 			$.get('./view/' + target.text() + '.html',
 				function(data){
 					console.log(data);
