@@ -28,19 +28,19 @@
 }
 
 .historyItemDiv {
-	font-family: 'Righteous', sans-serif;
+	font-family: 'Poiret One', sans-serif;
 	width: 6rem;
 	text-align: center;
 	padding-top: 0.5rem;
 	padding-bottom: 0.5rem;
 	margin-top: 7rem;
 	cursor: pointer;
-	font-size: 1.2rem;
+	font-size: 1.6rem;
 }
 
 .selectedHistoryItemDiv {
-	font-size: 1.6rem;
-	text-decoration: underline;
+	font-size: 1.9rem;
+	font-weight: 900;
 }
 
 .centerContainer, .adBox1Container {
