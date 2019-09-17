@@ -29,6 +29,7 @@
 	
 		<!-- main div start -->
 		<div class="mainDiv">
+			
 			<!-- first row start -->
 			<div class="rowContainer" style="background: #333; display: block;" id="mainView_default">
 				<div class="centerContainer">
@@ -47,10 +48,17 @@
 			<!-- first row end -->
 		</div>
 		<!-- main div end -->
+		
+		<!-- loading div start -->
+		<div class="loadingDiv" style="background: #333; display: block;" id="loadingDiv">
+		</div>
+		<!-- loading div end -->
 	</body>
 	
 	<script>
 		function changeMainView(target) {
+			$("#loadingDiv").show();
+			
 			$(".historyItemDiv").each(function() {
 				$(this).removeClass("selectedHistoryItemDiv");
 			});
@@ -59,9 +67,6 @@
 			$(".rowContainer").each(function() {
 				$(this).hide();
 			});
-			
-			targetView = $("#mainView_default");
-			targetView.show();
 			
 			$.get('./view/' + target.text() + '.html',
 				function(data){
@@ -73,10 +78,12 @@
 						targetView = $("#mainView_default");
 					}
 					targetView.show();
+					$("#loadingDiv").hide();
 				}
 			).fail(function() {
 				targetView = $("#mainView_default");
 				targetView.show();
+				$("#loadingDiv").hide();
 			});
 		}
 	</script>

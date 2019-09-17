@@ -4,7 +4,7 @@
 	font-family: 'Nanum Gothic', sans-serif;
 }
 
-.historyDiv, .mainDiv {
+.historyDiv, .mainDiv, .loadingDiv {
 	position: fixed;
 	height: 100%;
 }
@@ -17,6 +17,12 @@
 }
 
 .mainDiv {
+	width: calc(100% - 6rem);
+	right: 0;
+	top: 0;
+}
+
+.loadingDiv {
 	width: calc(100% - 6rem);
 	right: 0;
 	top: 0;
