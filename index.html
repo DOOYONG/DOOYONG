@@ -63,16 +63,18 @@
 			$.get('./view/' + target.text() + '.html',
 				function(data){
 					console.log(data);
+					$(".mainDiv").eq(0).append(data);
+					
+					var targetView = $("#mainView_" + target.text());
+					if(!targetView.length) {
+						targetView = $("#mainView_default");
+					}
+					targetView.show();
 				}
-			);
-			
-			var targetView = $("#mainView_" + target.text());
-			if(targetView.length) {
-				targetView.show();
-			} else {
+			).fail(function() {
 				targetView = $("#mainView_default");
-			}
-			targetView.show();
+				targetView.show();
+			});
 		}
 	</script>
 </html>
