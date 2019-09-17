@@ -65,6 +65,7 @@
 .normalButton {
 	color: #333; 
 	background: #DDD;
+	cursor: pointer;
 }
 
 .normalButton:hover {
