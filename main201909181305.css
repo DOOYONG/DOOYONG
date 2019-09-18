@@ -80,6 +80,7 @@
 .centerContainerContentDiv {
 	width: calc(100% - 20rem);
 	backround: red;
+	padding-bottom: 21.5rem;
 }
 
 .normalButton {
