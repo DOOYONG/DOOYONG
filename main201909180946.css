@@ -10,22 +10,26 @@
 }
 
 .historyDiv {
-	width: calc(6rem + 20rem);
+	width: calc(8rem + 20rem);
 	left: 0;
 	top: 0;
 	background: #777;
 }
 
 .mainDiv {
-	width: calc(100% - 6rem);
+	width: calc(100% - 8rem);
 	right: 0;
 	top: 0;
 }
 
 .loadingDiv {
-	width: calc(100% - 6rem);
+	width: calc(100% - 8rem);
 	right: 0;
 	top: 0;
+}
+
+.historyDivFooter {
+	position: fixed; left: 0; bottom: 0; height: 3rem; background: #555; color: fff; text-align: center; width: 8rem; line-height: 3rem;
 }
 
 .scrollDiv {
@@ -35,7 +39,7 @@
 
 .historyItemDiv {
 	font-family: 'Poiret One', sans-serif;
-	width: 6rem;
+	width: 8rem;
 	text-align: center;
 	padding-top: 0.5rem;
 	padding-bottom: 0.5rem;
