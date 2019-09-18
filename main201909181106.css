@@ -94,13 +94,27 @@
 	}
 }
 
-@media ( min-width : 900px ) {
+@media ( min-width : 400px ) {
+	* {
+		font-size: 10px;
+	}
+	.centerContainer {
+		margin: 0 auto;
+		width: 400px;
+	}
+	.adBox1Container {
+		margin: 0 auto;
+		width: 40rem;
+	}
+}
+
+@media ( min-width : 600px ) {
 	* {
 		font-size: 14px;
 	}
 	.centerContainer {
 		margin: 0 auto;
-		width: 900px;
+		width: 600px;
 	}
 	.adBox1Container {
 		margin: 0 auto;
