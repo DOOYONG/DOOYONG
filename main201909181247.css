@@ -53,7 +53,7 @@
 	font-weight: 900;
 }
 
-.centerContainer, .adBox1Container {
+.centerContainer, .adBox1Container, .centerContainerInnerBox, .centerContainerContentDiv {
 	position: relative;
 }
 
@@ -64,6 +64,22 @@
 	left: 0;
 	top: 0;
 	display: none;
+	overflow: hidden;
+}
+
+.centerContainer {
+	overflow: hidden;
+}
+
+.centerContainerInnerBox {
+	overflow: scroll;
+	width: calc(100% + 20rem);
+	height: calc(100% + 20rem);
+}
+
+.centerContainerContentDiv {
+	width: calc(100% - 20rem);
+	backround: red;
 }
 
 .normalButton {
@@ -78,7 +94,6 @@
 }
 
 .adBox1Container {
-	height: 100%;
 	font-size: 2rem;
 }
 
